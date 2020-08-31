@@ -29,9 +29,6 @@ export default class CreateExercise extends Component {
             })
     }
 
-    // Para os "onChange" é preciso fazer 1 por 1?
-    // Ou existe uma maneira de fazer automatico e
-    // só para alguns especificos criar uma logica?
     onChangeUsername = (e) => {
         this.setState({
             username : e.target.value
