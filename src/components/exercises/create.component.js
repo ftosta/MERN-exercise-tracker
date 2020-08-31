@@ -4,17 +4,9 @@ import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css"
 
 export default class CreateExercise extends Component {
-    
+
     constructor(props) {
         super(props)
-
-        // Não existe uma maneira de fazer isso automatico?
-        // Precisa dar bind em tudo?
-        this.onChangeUsername = this.onChangeUsername.bind(this)
-        this.onChangeDescription = this.onChangeDescription.bind(this)
-        this.onChangeDuration = this.onChangeDuration.bind(this)
-        this.onChangeDate = this.onChangeDate.bind(this)
-        this.onSubmit = this.onSubmit.bind(this)
 
         this.state = {
             username : '',
@@ -40,31 +32,31 @@ export default class CreateExercise extends Component {
     // Para os "onChange" é preciso fazer 1 por 1?
     // Ou existe uma maneira de fazer automatico e
     // só para alguns especificos criar uma logica?
-    onChangeUsername(e) {
+    onChangeUsername = (e) => {
         this.setState({
             username : e.target.value
         })
     }
 
-    onChangeDescription(e) {
+    onChangeDescription = (e) => {
         this.setState({
             description : e.target.value
         })
     }
 
-    onChangeDuration(e) {
+    onChangeDuration = (e) => {
         this.setState({
             duration : e.target.value
         })
     }
 
-    onChangeDate(date) {
+    onChangeDate = (date) => {
         this.setState({
             date : date
         })
     }
 
-    onSubmit(e) {
+    onSubmit = (e) => {
         e.preventDefault()
 
         const exercise = {

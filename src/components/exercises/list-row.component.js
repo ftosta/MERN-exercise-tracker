@@ -6,8 +6,6 @@ export default class ExerciseListRow extends Component {
 
     constructor(props) {
         super(props)
-        console.log('props',props)
-        //this.deleteExercise = this.deleteExercise.bind(this)
 
         this.state = {exercise: props.exercise}
     }
@@ -30,7 +28,3 @@ export default class ExerciseListRow extends Component {
         )
     }
 }
-/*
-const Exercise = props => (
-    
-*/
