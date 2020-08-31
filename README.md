@@ -1,4 +1,4 @@
-# This is a Study app
+# This is a study app
 
 If you have something to help me improve my studies with React and Nodejs, please, feel free to get in touch
 
