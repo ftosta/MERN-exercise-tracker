@@ -25,6 +25,5 @@ app.use('/exercises',exercisesRouter)
 app.use('/users',usersRouter)
 
 app.listen(port, () => {
-    // eslint-disable-next-line no-template-curly-in-string
     console.log(`Server is running on port: ${port}`)
 })
