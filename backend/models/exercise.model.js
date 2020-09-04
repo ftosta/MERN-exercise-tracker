@@ -1,4 +1,5 @@
-const mongoose = require('mongoose')
+/*
+onst mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
@@ -17,3 +18,22 @@ const exerciseSchema = new Schema({
 const Exercise = mongoose.model('Exercise', exerciseSchema)
 
 module.exports = Exercise
+*/
+
+const Driver = require('../drivers/database/driver')
+
+class ExerciseModel{
+    constructor() {
+        this.mock = new Driver('ExerciseModel')
+    }
+    
+    find() {
+        try {
+            return this.mock.find()
+        }catch(errorExerciseModel) {
+            throw errorExerciseModel
+        }
+    }
+}
+
+module.exports = ExerciseModel
