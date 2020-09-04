@@ -27,11 +27,27 @@ class ExerciseModel{
         this.mock = new Driver('ExerciseModel')
     }
     
-    find() {
+    find(param) {
         try {
-            return this.mock.find()
-        }catch(errorExerciseModel) {
-            throw errorExerciseModel
+            return this.mock.find(param)
+        }catch(errorExerciseModelFind) {
+            throw errorExerciseModelFind
+        }
+    }
+
+    findOne(param) {
+        try {
+            return this.mock.find(param)
+        }catch(errorExerciseModelFind) {
+            throw errorExerciseModelFind
+        }
+    }
+
+    create(data) {
+        try {
+            return data
+        } catch(errorExerciseModelCreate) {
+            throw errorExerciseModelCreate
         }
     }
 }
